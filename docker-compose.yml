@@ -1,0 +1,16 @@
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - app_data:/data
+    environment:
+      - WEBHOOK_SECRET=testsecret
+      - DATABASE_URL=sqlite:////data/app.db
+      - LOG_LEVEL=INFO
+      - PYTHONPATH=.
+
+volumes:
+  app_data:
