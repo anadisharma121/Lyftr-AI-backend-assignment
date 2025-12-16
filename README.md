@@ -99,7 +99,7 @@ curl "http://localhost:8000/messages?from=%2B919876543210"
 
 **Total Count**: The `total` field in the response reflects the count of the filtered dataset, not just the page size. This is achieved via a separate `SELECT COUNT(*)` query constructed dynamically based on the active filters (`from`, `since`, `q`).
 
-**Input Validation**: `limit` (max 100) and `offset` (min 0) are strictly validated using FastAPI's `Query` parameters.
+**Input Validation**: `limit` (max 100) and `offset` (min 0) are strictly validated using FastAPI's Query parameters.
 
 **4. Observability**
 
